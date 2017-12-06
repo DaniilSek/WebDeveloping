@@ -1,0 +1,159 @@
+body {
+    margin: auto;
+    padding: 0;
+    background: #fff;
+
+}
+
+body > header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #3a4653;
+    height: 55px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18pt;
+    color: #fff;
+}
+
+.central-1,
+.central-2 {
+    display: flex;
+    height: auto;
+    margin: auto;
+    text-align: left;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 12pt;
+    color: #3a4653;
+}
+
+.central-1 {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+.central-2 {
+    flex-direction: column;
+    padding: 30px 50px;
+    width:  100% !important;
+    margin: 0 !important;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    margin: 50px 0 50px 0;
+    transition: transform 1s;
+}
+
+.icon-container:hover {
+    transform: scale(1.15);
+}
+
+.icon-container img {
+    height: 65%;
+}
+
+.icon-container p {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20pt;
+    color: #3a4653;
+    text-align: center;
+    margin: 10px 0 0 0;
+    padding: 0;
+}
+
+.home-icon {
+    content: url(img/home.png);
+    height: 70%;
+    margin-right: 10px;
+}
+
+.home-icon:hover {
+    opacity: .5;
+    transition: opacity .5s linear;
+}
+
+section header {
+    font-family: 'PT Serif Caption', serif;
+    font-size: 18pt;
+    color: #3a4653;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+.img-container {
+    width: 100%;
+    text-align: center;
+    margin: 30px 0 10px 0;
+}
+
+nav {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+nav a {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 30px;
+    margin: 0 20px;
+    border-radius: 7px;
+    background: #574B90;
+}
+
+nav a:hover {
+    background: #7a69ca;
+    transition: background-color .5s linear;
+}
+
+output, code {
+    display: block;
+    width: 100%;
+}
+
+output pre,
+code pre {
+    display: block;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+output pre {
+    background: #323764;
+    color: #fff;
+    width: 80%;
+}
+
+code pre {
+    background: #e6e5f7;
+    color: #000;
+}
+
+.comment {
+    color: #069129;
+}
+
+.reserved {
+    color: #0e1cb7;
+}
+
+.string {
+    color: #7e0a00;
+}

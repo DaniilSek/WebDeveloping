@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Sending";
+}
+
+<main>
+    <section class="central-2">
+        <header>Отправка электронной почты с помощью SmtpClient</header>
+        <article>
+            <code>
+<pre><span class="reserved">namespace</span> NetConsoleApp
+{
+    <span class="reserved">class</span> Program
+    {
+        <span class="reserved">static void</span> Main( <span class="reserved">string</span>[] args)
+        {
+
+            <span class="comment">// отправитель - устанавливаем адрес и отображаемое в письме имя</span>
+            MailAddress from = <span class="reserved">new</span> MailAddress(<span class="string">"nomad1996@yandex.ru"</span>, <span class="string">"Даниил"</span>);
+            <span class="comment">// кому отправляем</span>
+            MailAddress to = <span class="reserved">new</span> MailAddress(<span class="string">"farrago1996@gmail.com"</span>);
+            <span class="comment">// создаем объект сообщения</span>
+            MailMessage m = <span class="reserved">new</span> MailMessage(from, to);
+            <span class="comment">// тема письма</span>
+            m.Subject = <span class="string">"Тест"</span>;
+            <span class="comment">// текст письма</span>
+            m.Body = <span class="string">"&lth2&gtПисьмо-тест работы smtp-клиента&lt/h2&gt"</span>;
+            <span class="comment">// письмо представляет код html</span>
+            m.IsBodyHtml = <span class="reserved">true</span>;
+            <span class="comment">// адрес smtp-сервера и порт, с которого будем отправлять письмо</span>
+            SmtpClient smtp = <span class="reserved">new</span> SmtpClient(<span class="string">"smtp.yandex.ru"</span>, 25);
+            <span class="comment">// логин и пароль</span>
+            smtp.Credentials = <span class="reserved">new</span> NetworkCredential(<span class="string">"nomad1996@yandex.ru"</span>,
+                <span class="string">"Nomad2406961996"</span>);
+            smtp.EnableSsl = <span class="reserved">true</span>;
+            smtp.Send(m);
+            Console.Read();
+        }
+    }
+}</pre>
+            </code>
+        </article>
+    </section>
+</main>
